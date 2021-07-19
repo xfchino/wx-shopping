@@ -1,0 +1,91 @@
+<!-- <view wx:if="{{userInfo}}" class="userInfo">
+    <image src="{{userInfo.avatarUrl}}"></image>
+    <view>
+        <text>{{userInfo.nickName}}</text>
+    </view>
+    <view>
+        <text bindtap="logout">注销</text>
+    </view>
+</view>
+<view wx:else>
+    <navigator url="/pages/login/login">请登录</navigator>
+</view> -->
+<view class="profile">
+    <view class="backg">
+       <navigator open-type="navigate" url="/pages/login/login" wx:if="{{!userInfo}}">
+           登陆
+       </navigator>
+       <view class="userInfo" wx:else>
+            <image class="bac-img" src="{{userInfo.avatarUrl}}" mode="widthFix"  />
+             <view class="base">
+                 <image class="avatar" src="{{userInfo.avatarUrl}}" mode="scaleToFill"  />
+                 {{userInfo.nickName}}
+             </view>
+                
+       </view>
+    </view>
+    <view class="block">
+        <view class="vi">
+            <view class="group">
+                <view class="tint">0</view>
+                <view>收藏的店铺</view>
+            </view>
+            <navigator url="../../pages/collect/index" open-type="navigate">
+                <view class="group">
+                    <view class="tint">{{collectCount}}</view>
+                    <view>收藏的商品</view> 
+                </view>  
+            </navigator>
+            <view class="group">
+                <view class="tint">0</view>
+                <view>关注的商品</view>
+            </view>
+            <view class="group">
+                <view class="tint">0</view>
+                <view>我的足迹</view>
+            </view>
+        </view>
+    
+        <view class="program">
+           <view class="title"> 我的订单 </view>
+           <view class="vi">
+            <view class="group">
+                <view class="tint iconfont icon-ding_dan"></view>
+                <view>全部订单</view>
+            </view>
+            <view class="group">
+                <view class="tint iconfont icon-fukuantongzhi"></view>
+                <view>待付款</view>
+            </view>
+            <view class="group">
+                <view class="tint iconfont icon-receipt-address"></view>
+                <view>待收货</view>
+            </view>
+            <view class="group">
+                <view class="tint iconfont icon-tuihuotuikuan_dianpu"></view>
+                <view>退款/售后</view>
+            </view>
+        </view>  
+        </view>
+
+        <view class="address">
+            收获地址管理
+        </view>
+         
+        <view class="ateraction">
+        <view>联系客服</view>
+        <navigator  open-type="navigate" url="../../pages/feedback/index">
+            <view>意见反馈</view>
+        </navigator>
+          
+        <view>联系我们</view>
+        <view bindtap="logout">注销</view>
+        </view>
+
+        <view class="address">
+            把应用推荐给其他人
+        </view>
+          
+    </view>     
+</view>
+

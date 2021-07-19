@@ -1,0 +1,58 @@
+<view>
+<!-- <image src="{{product.goods_big_logo}}"></image> -->
+<swiper class="swiper" indicator-dots circular>
+    <swiper-item wx:for="{{product.pics}}" wx:key="pics_id" class="swiper-item">
+        <image  class="swiperpic" src="{{item.pics_big}}"></image>
+    </swiper-item>
+</swiper>
+<view class="describe">
+    <text class="price">￥{{product.goods_price}}</text>
+    <!-- <view>
+        <text>{{product.goods_name}}</text>
+    </view> -->
+    <view class="desc">
+            <view class="name">
+                {{product.goods_name}}
+            </view>
+            <view class="cart" bindtap="collect">
+                <image src="/img/content/cart.svg" mode="widthFix" hidden="{{isCollect}}"/>
+                <image src="/img/content/cart-a.svg" mode="widthFix" hidden="{{!isCollect}}"/> 
+                <view class="collect_text">收藏</view>
+            </view>
+</view>
+</view>
+<!-- <view class="cart" bindtap="collect">
+                <image src="/img/content/cart.svg" mode="widthFix" hidden="{{isCollect}}"/>
+                <image src="/img/content/cart-a.svg" mode="widthFix" hidden="{{!isCollect}}"/> 
+                <view class="collect_text">收藏</view>
+            </view> -->
+
+<rich-text nodes="{{product.goods_introduce}}"></rich-text>
+
+<view class="tool">
+        <view class="left">
+            <view>
+                <image class="img" src="/img/content/kefu.svg" mode="widthFix" />
+                <view class="tool-name">客服</view>
+            </view>
+            <view>
+                <image class="img" src="/img/content/share.svg" mode="widthFix" />
+                <view class="tool-name">分享</view>
+            </view>
+            <view>
+                <navigator class="" target="" url="../../pages/shopcar/shopcar" open-type="switchTab">
+                    <image class="img" src="/img/content/cart.svg" mode="widthFix" />
+                <view class="tool-name" bindtap="toCart">购物车</view>
+                </navigator>    
+            </view>
+        </view>
+        <view class="right">
+            <view class="add-cart"  bindtap="addCart">
+                加入购物车
+            </view>
+            <view class="buy">
+               立即购买
+            </view>
+        </view>
+    </view>
+</view>

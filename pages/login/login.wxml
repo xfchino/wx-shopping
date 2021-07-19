@@ -1,0 +1,4 @@
+<!-- <button bindtap="usrbtn">授权登录</button> -->
+<view>
+ <button class="login" plain type="primary" open-type="getUserInfo" bindtap="usrbtn">授权登陆</button>
+</view>

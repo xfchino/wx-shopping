@@ -1,0 +1,30 @@
+<view class="category">
+    <scroll-view class="category-left" scroll-y enhanced show-scrollbar="false">
+        <view wx:for="{{categoris}}" class="category-left-item {{item.cat_id==activeId?'active':''}}" 
+        wx:key="cat_id"
+        bindtap="changeCategory" mark:id="{{item.cat_id}}"
+        >
+            <text class="category-name">{{item.cat_name}}</text>
+        </view>
+    </scroll-view>
+    <!-- 右边商品 -->
+    <scroll-view class="category-right" scroll-y enhanced show-scrollbar="false">
+        <view wx:for="{{goodsList}}"  wx:key="{{cat_id}}" >     
+                <text class="goods-title">{{item.cat_name}}</text>
+                <!-- 每个单独的商品 -->
+                <view class="item2-list">
+                <!-- 每一项商品 -->
+                <navigator 
+                wx:for="{{item.children}}" wx:key="{{cat_id}}" wx:for-item="item2"
+                url="/pages/goodslist/goodslist?cid={{item2.cat_id}}"
+                >
+                    <view  class="goods">
+                    <image class="pic" mode="widthFix" src="{{item2.cat_icon}}"></image>
+                    <text>{{item2.cat_name}}</text>
+                    </view>
+                </navigator>              
+                </view>
+        </view>
+    </scroll-view>
+</view>
+ 

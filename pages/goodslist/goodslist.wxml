@@ -1,0 +1,29 @@
+<view class="tabbar">
+    <view  wx:for="{{tabbarBar}}" wx:key="_id" class="tab-item {{item._id==activeId?'active':''}}"
+    bindtap="changeBar"
+    mark:id="{{item._id}}"
+    >{{item.value}}</view>
+</view>
+<!-- l轮播图 -->
+<swiper class="swiper" 
+bindchange="changeSwiper"
+current="{{activeId}}"
+indicator-active-color="#fe3b98"
+>
+    <swiper-item  wx:for="{{tabbarBar}}" wx:key="_id">
+        <scroll-view class="content"  scroll-y bindscrolltolower="scrollbottom">
+        <!-- 里面商品 -->
+            <view  class="goods-flex-box">
+               <view wx:for="{{goodsList}}"  wx:key="goods_id" wx:for-item="item2" class="goods-item2" 
+               bindtap="detail"
+               mark:id="{{item2.goods_id}}"
+               > 
+                <image src="{{item2.goods_small_logo}}" class="pic"></image>
+                
+                <text class="text">{{item2.goods_name}}</text>
+                <text class="price">{{item2.goods_price}}</text>
+               </view>
+            </view>
+        </scroll-view>
+    </swiper-item>
+</swiper>

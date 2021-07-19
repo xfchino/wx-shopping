@@ -1,0 +1,52 @@
+/* pages/home/home.wxss */
+
+.search{
+  width: 90%;
+  height: 60rpx;
+  color: var(--text-gray);
+  text-align: center;
+  border-radius: 20rpx;
+  line-height: 60rpx;
+  background: var(--text-color);
+  position: relative;
+}
+.search-img{
+  width: 46rpx;
+  height: 46rpx;
+  position: absolute;
+  right: 5px;
+  top: 0px;
+  bottom: 0px;
+  margin: auto;
+}
+#mian{
+  padding: 24rpx;
+  
+}
+#swiper{
+ /* padding: 24rpx; */
+  
+}
+#swiper image{
+  height: 340rpx;
+  width: 100%;
+}
+swiper-item{
+  border-radius: 10rpx;
+}
+/* 导航 */
+#nav{
+  margin-top: 30rpx;
+  display: flex;
+  justify-content: space-between;
+}
+#nav view{
+  /* flex-grow: 1; */
+  text-align: center;
+  width: 160rpx;
+  height: 160rpx;
+}
+#nav image{
+  width: 160rpx;
+  height: 160rpx;
+}

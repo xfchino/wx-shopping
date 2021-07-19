@@ -1,0 +1,24 @@
+<!--components/floor/floor.wxml-->
+<view class="floor">
+<!-- <text>{{floor.floor_title.name}}</text> -->
+<image  mode="widthFix" src="{{floor.floor_title.image_src}}"></image>
+<view class="content">
+    <view class="content-left">
+        <image mode="widthFix" src="{{floor.product_list[0].image_src}}"></image>
+    </view>
+    <view class="content-right">      
+             <view class="item">
+             <image mode="scaleToFill" src="{{floor.product_list[1].image_src}}"></image>
+             </view>
+             <view class="item">
+                <image mode="scaleToFill" src="{{floor.product_list[2].image_src}}"></image>
+             </view>
+             <view class="item">
+                <image mode="scaleToFill" src="{{floor.product_list[3].image_src}}"></image>
+             </view>
+             <view class="item">
+                <image mode="scaleToFill" src="{{floor.product_list[4].image_src}}"></image>
+             </view>     
+    </view>
+</view>
+</view>

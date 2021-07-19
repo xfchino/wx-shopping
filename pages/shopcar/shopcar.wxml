@@ -1,0 +1,46 @@
+<view class="cart-good" wx:for="{{cartList}}">
+                <view class="left">
+                    <checkbox-group  >
+                        <checkbox checked="{{item.checked}}"  bindtap="check" mark:index="{{index}}" color="#fc3971" >
+                        </checkbox>
+                    </checkbox-group>
+
+                </view>
+                <view class="pic">
+                    <navigator open-type="navigate" url="/pages/detail/detail?goods_id={{item.goods_id}}">
+                        <image class="" src="{{item.goods_big_logo}}" mode="widthFix" />
+
+                    </navigator>
+
+                </view>
+                <!-- 商品数目 -->
+                <view class="content">
+                    <view class="name">{{item.goods_name}}</view>
+                    <view class="group">
+                        <view class="group-left">￥{{item.goods_price}}</view>
+                        <view class="group-tool">
+                        <!-- 加减 -->
+                            <view class="add" bindtap="add" mark:index="{{index}}" > +</view>
+                            <view class="num"> {{item.num}}</view>
+
+                            <view class="reduce" bindtap="reduce" mark:index="{{index}}" >-</view>
+
+                        </view>
+                    </view>
+                </view>
+</view>
+<!-- 底部结算和总计 -->
+<view class="cart-bottom">
+            <view class="cart-bottom-left">
+                <checkbox-group bindchange="">
+                    <checkbox color="#fc3971" checked="{{allSelect}}" bindtap="allchecked">
+                        全选
+                    </checkbox>
+                </checkbox-group>
+    
+            </view>
+            <view class="cart-bottom-center">
+                合计：<text>￥{{totalPrice}}</text>
+            </view>
+            <view class="cart-bottom-right" bindtap="buy">结算({{SelectCount}})</view>
+</view>

@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "floor":"/components/floor/floor",
+    "navbar":"/components/navbar/navbar"
+  },
+  "enablePullDownRefresh": true
+}

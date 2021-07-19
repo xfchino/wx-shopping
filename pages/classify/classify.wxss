@@ -1,0 +1,51 @@
+.category{
+    display: flex;
+}
+.category-left{
+    height: 100vh;
+    width: 200rpx;
+    background-color: rgb(245, 244, 244);
+}
+.category-left-item{
+    text-align: center;
+    line-height: 100rpx;
+    border-left: 6rpx solid transparent;
+}
+.category-left-item.active{
+    background-color: white;
+    border-left: 6rpx solid #FF00AE;
+    color:#FF00AE ;
+}
+.category-right{
+    width: 550rpx;
+    height: 100vh;
+}
+::-webkit-scrollbar{
+    width: 0;
+    height: 0;
+    color: transparent;
+}
+/* 每个单独的商品 */
+.goods-title{
+    margin-top: 30rpx;
+    display: block;
+    width: 100%;
+    text-align: center;
+    /* font-weight: bold; */
+}
+.item2-list{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 5rpx;
+}
+.goods{
+    width: 160rpx;
+    display: flex;
+    flex-direction: column;
+    margin: 10rpx;
+
+   align-items: center;
+}
+.pic{
+    width: 160rpx;
+}

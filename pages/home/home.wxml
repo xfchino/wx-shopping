@@ -1,0 +1,27 @@
+<view class="ns">
+  <!-- <navbar>
+        <view slot="left">天天优购</view>
+        <view slot="center" class="search">
+            <navigator url="../../pages/search/index" open-type="navigate">搜索</navigator>
+            <image class="" src="/img/content/search.svg" class="search-img" />
+        </view>
+    </navbar> -->
+<view id="mian">
+  <swiper id="swiper" indicator-dots circular autoplay indicator-active-color="#fe3b98">
+    <swiper-item wx:for="{{swiperImg}}" wx:key="goods_id" >
+      <image src="{{item.image_src}}"></image>
+    </swiper-item>
+  </swiper>
+
+  <!-- 内容 -->
+  <view id="nav">
+    <view wx:for="{{nav}}" wx:key="_id">
+      <!-- <text>{{item.name}}</text> -->
+      <image mode="widthFix" src="{{item.image_src}}"></image>
+    </view>
+  </view>
+  <floor floor="{{floor[0]}}"></floor>
+  <floor floor="{{floor[1]}}"></floor>
+  <floor floor="{{floor[2]}}"></floor>
+</view>
+</view>
